@@ -24,7 +24,6 @@ def evitar_bloqueio_tela():
 def movimentar_mouse_no_teams():
     while True:
         posicao = obter_posicao_teams()
-
         if posicao:
             x, y, largura, altura = posicao
 
