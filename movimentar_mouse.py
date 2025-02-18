@@ -3,7 +3,6 @@ import pyautogui
 import time
 import random
 import pygetwindow as gw
-
 def obter_posicao_teams():
     """Obtém a posição e dimensões da janela do Microsoft Teams."""
     janelas = gw.getWindowsWithTitle("Microsoft Teams")  # Busca a janela do Teams
@@ -18,6 +17,8 @@ def evitar_bloqueio_tela():
         pyautogui.press("shift")  # No Windows, pressionamos Shift
     else:
         pyautogui.press("ctrl")   # No Mac/Linux, pressionamos Ctrl
+        pyautogui.press("ctrl")  # No Mac/Linux, pressionamos Ctrl
+
     print("🔄 Tecla pressionada para evitar bloqueio de tela.")
 
 
@@ -34,7 +35,7 @@ def movimentar_mouse_no_teams():
             # Move o mouse para essa posição dentro do Teams
             pyautogui.moveTo(novo_x, novo_y, duration=0.5)
             print(f"Mouse movido para {novo_x}, {novo_y} dentro do Teams.")
-            
+           
         else:
             print("⚠️ Microsoft Teams não encontrado. O mouse não foi movido.")
 
@@ -43,10 +44,22 @@ def movimentar_mouse_no_teams():
 
         # Aguarda 3 minutos antes de repetir
         time.sleep(360)
-
-
         
 
 if __name__ == "__main__":
     print("🔵 Movimentação do mouse iniciada... O Teams permanecerá online e a tela não bloqueará!")
     movimentar_mouse_no_teams()
+        else:
+            print("⚠️ Microsoft Teams não encontrado. O mouse não foi movido.")
+
+        # Simula o pressionamento de uma tecla para evitar bloqueio
+        evitar_bloqueio_tela()
+
+        # Aguarda 2 minutos antes de repetir
+        time.sleep(60)
+
+
+if __name__ == "__main__":
+    print("🔵 Movimentação do mouse iniciada... O Teams permanecerá online e a tela não bloqueará!")
+    movimentar_mouse_no_teams()
+
