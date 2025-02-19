@@ -3,6 +3,7 @@ import pyautogui
 import time
 import random
 import pygetwindow as gw
+## Jean Heberth ##########################################
 
 def obter_posicao_teams():
     """Obtém a posição e dimensões da janela do Microsoft Teams."""
