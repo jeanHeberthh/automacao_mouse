@@ -46,8 +46,6 @@ def movimentar_mouse_no_teams():
         time.sleep(360)
 
 
-        
-
 if __name__ == "__main__":
     print("🔵 Movimentação do mouse iniciada... O Teams permanecerá online e a tela não bloqueará!")
     movimentar_mouse_no_teams()

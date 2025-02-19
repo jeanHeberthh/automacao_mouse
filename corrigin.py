@@ -45,9 +45,6 @@ def movimentar_mouse_no_teams():
         # Aguarda 2 minutos antes de repetir
         time.sleep(60)
 
-
-        
-
 if __name__ == "__main__":
     print("🔵 Movimentação do mouse iniciada... O Teams permanecerá online e a tela não bloqueará!")
     movimentar_mouse_no_teams()
